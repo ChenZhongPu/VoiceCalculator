@@ -24,7 +24,7 @@ $ rake device
 $ rake emulator
 ```
 
-You can also download the current version at [Droplr](http://d.pr/f/10dv8)
+You can also download the current version at [Droplr](http://d.pr/f/1dLhW) or [Baidu](http://pan.baidu.com/s/1skm3Gw1).
 
 ## Screenshots
 

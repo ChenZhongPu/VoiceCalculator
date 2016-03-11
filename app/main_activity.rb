@@ -2,7 +2,7 @@ module MainModule
   @@displayView = nil
   @@resultView = nil
 
-  @@isCmdOrOpeClicked = false
+  @@isCmdOrOpeClicked = true
 
   @@isError = false
 
@@ -154,11 +154,10 @@ class BtnNumListener
   def onClick(view)
     puts 'click in lisnter...'
     musicName = MainActivity::ID_AUDIO[view.getId]
-    back = MainModule.getAudioPlayer.play(MainModule.getAduioHash[musicName], 1, 1, 1, 0, 1)
-    puts 'back'
-    puts back
+    MainModule.getAudioPlayer.play(MainModule.getAduioHash[musicName], 1, 1, 1, 0, 1)
     MainActivity.displayText = MainActivity.displayText + MainActivity::DISPLAYHASH[view.getId]
     MainModule.get.setText(MainActivity.displayText)
+    puts 'num ' + MainActivity.displayText
     MainModule.getResult.setText(EvalString.new.evalResult(MainActivity.displayText))
     if MainModule.getIsError
       MainModule.getResult.setText('ERROR')
@@ -178,6 +177,7 @@ class BtnOpeListener
     back = MainModule.getAudioPlayer.play(MainModule.getAduioHash[musicName], 1, 1, 1, 0, 1)
     MainActivity.displayText = MainActivity.displayText + MainActivity::DISPLAYHASH[view.getId]
     MainModule.get.setText(MainActivity.displayText)
+    # MainModule.get.setText('\u00d7')
     MainModule.setIsCmdOrOpeClicked(true)
   end
 end
@@ -192,6 +192,7 @@ class BtnCmdListener
       MainActivity.displayText = ''
       MainModule.get.setText('')
       MainModule.getResult.setText('0')
+      MainModule.setIsCmdOrOpeClicked(true)
     when R::Id::Img_cal_del
       case MainActivity.displayText.size
       when 0
@@ -200,21 +201,26 @@ class BtnCmdListener
         MainActivity.displayText = ''
         MainModule.get.setText('')
         MainModule.getResult.setText('0')
+        MainModule.setIsCmdOrOpeClicked(true)
       else
         MainActivity.displayText = MainActivity.displayText[0..-2]
         MainModule.get.setText(MainActivity.displayText)
         lastOne = MainActivity.displayText[-1]
         if ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].include? lastOne
           MainModule.getResult.setText(EvalString.new.evalResult(MainActivity.displayText))
+          MainModule.setIsCmdOrOpeClicked(false)
           if MainModule.getIsError
              MainModule.getResult.setText('ERROR')
              MainModule.setIsError(false)
           end
+        elsif ['+', '-', '*', '/', '.'].include? lastOne
+          MainModule.setIsCmdOrOpeClicked(true)
         end
       end
     when R::Id::Img_cal_amount
       MainActivity.displayText = ''
       MainModule.get.setText('')
+      MainModule.setIsCmdOrOpeClicked(true)
     end
 
   end
