@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/rl_cal_typebox"
         android:layout_width="wrap_content"
-        android:layout_height="190dp"
+        android:layout_height="200dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="30dp"
@@ -16,8 +16,8 @@
         android:orientation="vertical" >
 
         <HorizontalScrollView android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:scrollbars="none"
@@ -35,11 +35,11 @@
         <TextView
           android:id="@+id/result_textview"
           android:layout_width="match_parent"
-          android:layout_height="44dp"
+          android:layout_height="55dp"
           android:layout_marginLeft="18dp"
           android:layout_marginRight="28dp"
           android:layout_alignParentBottom="true"
-          android:layout_marginBottom="30dp"
+          android:layout_marginBottom="35dp"
           android:gravity="right"
           android:textColor="#222426"
           android:textSize="40sp"
