@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_cal_typebox"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/typebox"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scrollbars="none"
+            >
+            <TextView
+              android:id="@+id/input_typebox"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:gravity="right"
+              android:textColor="#444"
+              android:textSize="50sp"
+              android:text=""
+            />
+        </HorizontalScrollView>
+        <TextView
+          android:id="@+id/result_textview"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:layout_marginLeft="18dp"
+          android:layout_marginRight="28dp"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="30dp"
+          android:gravity="right"
+          android:textColor="#222426"
+          android:textSize="40sp"
+          android:text="0"
+        />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/img_cal_c"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/c"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_del"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/del"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_div"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/div"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_multiply"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/multiply"
+                android:scaleType="centerCrop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/img_cal_d7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d7"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_d8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d8"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_d9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d9"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_minus"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/minus"
+                android:scaleType="centerCrop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/img_cal_d4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d4"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_d5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d5"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_d6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/d6"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/img_cal_add"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/add"
+                android:scaleType="centerCrop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="vertical" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/img_cal_d1"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/d1"
+                        android:scaleType="centerCrop" />
+
+                    <ImageButton
+                        android:id="@+id/img_cal_d2"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/d2"
+                        android:scaleType="centerCrop" />
+
+                    <ImageButton
+                        android:id="@+id/img_cal_d3"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/d3"
+                        android:scaleType="centerCrop" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/img_cal_d0"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="2"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/d0"
+                        android:scaleType="centerCrop" />
+
+                    <ImageButton
+                        android:id="@+id/img_cal_dot"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/dot"
+                        android:scaleType="centerCrop" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:orientation="vertical" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/img_cal_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/amount"
+                        android:scaleType="centerCrop" />
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
