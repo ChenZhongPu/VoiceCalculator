@@ -3,7 +3,7 @@
 ![](icon.png)
 
 This Android app is written by `Ruby` with the advantage of `RubyMotion`.
-
+(Only support **Android 5.1+** )
 ## Features
 
 - Providing digit voice when clicking (in Mandarin)
